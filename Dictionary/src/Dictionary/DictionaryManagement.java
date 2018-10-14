@@ -28,7 +28,7 @@ public class DictionaryManagement {
 
     public void insertFromFile(){
         String s;
-        File file = new File("dictioneries.txt");
+        File file = new File("dictionaries.txt");
         try {
             FileReader fr =new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
