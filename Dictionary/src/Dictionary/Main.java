@@ -5,8 +5,8 @@ public class Main {
         DictionaryCommandline dc =new DictionaryCommandline();
         Dictionary a = new Dictionary();
         DictionaryManagement b =new DictionaryManagement();
-
-        //dc.dictionaryAdvanced();
         dc.dictionaryBasic();
+        //dc.dictionaryAdvanced();
+
     }
 }
