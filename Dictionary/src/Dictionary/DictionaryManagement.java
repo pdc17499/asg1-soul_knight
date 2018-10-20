@@ -5,24 +5,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DictionaryManagement {
-    Dictionary dic= new Dictionary();
-    public void insertFromCommandline(){
-        Scanner sc = new Scanner(System.in);
-        int s1;
-        System.out.println("Nhập số từ muốn thêm :");
-        s1=sc.nextInt();
-        sc.nextLine();
-        for(int i=0;i<s1;i++){
-            Word word =new Word();
-            System.out.println("Tiếng Anh");
-            word.setWord_target(sc.nextLine());
-            System.out.println("Tiếng Việt");
-            word.setWord_explain(sc.nextLine());
-            dic.arr.add(word);
-
+    public ArrayList<Word> insertFromcomandline() {
+        DictionaryManagement b = new DictionaryManagement();
+        ArrayList<Word> a = new ArrayList<>();
+        Dictionary s = new Dictionary();
+        int k;
+        k = b.nhapso();
+        for (int i = 0; i < k; i++) {
+            a.add(i, b.AddWord());
         }
-
-
+        return a;
     }
 
 
