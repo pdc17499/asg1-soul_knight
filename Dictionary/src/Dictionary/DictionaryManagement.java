@@ -1,23 +1,13 @@
 package Dictionary;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DictionaryManagement {
-    public ArrayList<Word> insertFromcomandline() {
-        DictionaryManagement b = new DictionaryManagement();
-        ArrayList<Word> a = new ArrayList<>();
-        Dictionary s = new Dictionary();
-        int k;
-        k = b.nhapso();
-        for (int i = 0; i < k; i++) {
-            a.add(i, b.AddWord());
-        }
-        return a;
-    }
-
-
+    Dictionary dic =new Dictionary();
     public void insertFromFile(){
         String s;
         File file = new File("dictionaries.txt");
@@ -25,11 +15,11 @@ public class DictionaryManagement {
             FileReader fr =new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             while((s=br.readLine()) != null){
-             Word word= new Word();
-             String [] x=s.split("\t");
-             word.setWord_target(x[0].trim());
-             word.setWord_explain(x[1]);
-             dic.arr.add(word);
+                Word word= new Word();
+                String [] x=s.split("\t");
+                word.setWord_target(x[0].trim());
+                word.setWord_explain(x[1]);
+                dic.Array.add(word);
             }
 
         }catch (Exception e){
@@ -43,33 +33,28 @@ public class DictionaryManagement {
         Scanner sc =new Scanner(System.in);
         a=sc.nextLine();
         int dem =0;
-        for (int i=0;i<dic.arr.size();i++){
-            if(dic.arr.get(i).getWord_target().contains(a)){
+        for (int i=0;i<dic.Array.size();i++){
+            if(dic.Array.get(i).getWord_target().contains(a)){
                 dem ++;
-                System.out.println(dic.arr.get(i).getWord_target() + " "+ dic.arr.get(i).getWord_explain());
+                System.out.println(dic.Array.get(i).getWord_target() + " "+ dic.Array.get(i).getWord_explain());
             }
             else if (dem==0){
                 System.out.println("Từ bạn nhập ko được tìm thấy");
             }
         }
     }
-    public void removeWord(){
-        System.out.println("Mời nhập từ cần xóa");
-        String b=new String();
-        Scanner sc =new Scanner(System.in);
-        b=sc.nextLine();
-        int dem=0;
-        for (int i=0;i<dic.arr.size();i++){
-            if (dic.arr.get(i).getWord_target().contains(b)){
-                dem++;
-                dic.arr.remove(dic.arr.get(i));
 
-            }
-            else if(dem==0) System.out.println("Từ bạn nhập ko có trong từ điển");
+
+    public ArrayList<Word> insertFromcomandline() {
+        DictionaryManagement b = new DictionaryManagement();
+        ArrayList<Word> a = new ArrayList<>();
+        Dictionary s = new Dictionary();
+        int k;
+        k = b.nhapso();
+        for (int i = 0; i < k; i++) {
+            a.add(i, b.AddWord());
         }
-    }
-    public void dictionaryExportToFile(){
-
+        return a;
     }
     public Word AddWord() {
         Word array = new Word();
@@ -91,6 +76,5 @@ public class DictionaryManagement {
         n = sc.nextInt();
         return n;
     }
-
 
 }

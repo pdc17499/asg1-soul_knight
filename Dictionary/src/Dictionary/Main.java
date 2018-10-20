@@ -1,9 +1,12 @@
 package Dictionary;
 
 public class Main {
-    public static void main(String [] args){
+    public static void main(String [] args ){
         DictionaryCommandline dc =new DictionaryCommandline();
-        dc.showAllWords();
+        Dictionary a = new Dictionary();
+        DictionaryManagement b =new DictionaryManagement();
 
+        //dc.dictionaryAdvanced();
+        dc.dictionaryBasic();
     }
 }
