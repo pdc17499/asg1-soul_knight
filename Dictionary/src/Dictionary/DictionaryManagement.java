@@ -76,5 +76,8 @@ public class DictionaryManagement {
         n = sc.nextInt();
         return n;
     }
+    public void doc(){
+
+    }
 
 }

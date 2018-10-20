@@ -27,7 +27,7 @@ public class DictionaryCommandline {
         DictionaryCommandline c = new DictionaryCommandline();
         a.insertFromFile();
         c.showAllWords(b);
-        a.dictionaryLookup();
+       // a.dictionaryLookup();
 
     }
 }

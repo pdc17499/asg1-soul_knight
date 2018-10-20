@@ -1,7 +1,7 @@
 package Dictionary;
 
 public class Word {
-    String word_target,word_explain;
+    String word_explain,word_target;
 
     public void setWord_target(String word_target) {
         this.word_target = word_target;

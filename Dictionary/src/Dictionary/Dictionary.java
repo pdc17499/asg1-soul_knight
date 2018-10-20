@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 
 public class Dictionary {
+    public int a;
     ArrayList<Word> Array= new ArrayList<>();
 
     public void setDictionarys(ArrayList<Word> array) {
