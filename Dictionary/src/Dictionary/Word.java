@@ -8,6 +8,7 @@ public class Word {
     }
 
     public void setWord_explain(String word_explain) {
+
         this.word_explain = word_explain;
     }
     public String getWord_target(){

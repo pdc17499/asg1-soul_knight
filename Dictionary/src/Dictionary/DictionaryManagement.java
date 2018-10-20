@@ -79,6 +79,26 @@ public class DictionaryManagement {
     public void dictionaryExportToFile(){
 
     }
+    public Word AddWord() {
+        Word array = new Word();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập từ tiếng Anh : ");
+        String a;
+        a = sc.nextLine();
+        array.setWord_target(a);
+        System.out.println("Nghĩa tiếng Việt : ");
+        String b;
+        b = sc.nextLine();
+        array.setWord_explain(b);
+        return array;
+    }
+    public int nhapso() {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhập số lượng từ vựng");
+        n = sc.nextInt();
+        return n;
+    }
 
 
 }
